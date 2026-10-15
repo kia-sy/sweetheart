@@ -1,0 +1,67 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1, viewport-fit=cover">
+  <title>A little gift for you</title>
+  <link href="https://fonts.googleapis.com/css2?family=Caveat:wght@600&family=Inter:wght@400;500&family=Poppins:wght@600;700&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="style.css">
+</head>
+<body>
+  <div id="hearts" aria-hidden="true"></div>
+
+  <section id="start">
+    <p class="tag">for you</p>
+    <h1>I made you something 🎁</h1>
+    <button class="btn" id="open">Open your gift</button>
+  </section>
+
+  <main id="room" hidden>
+    <h1>Welcome to Your Special Room ✨</h1>
+    <p class="hint">Tap the things in the room</p>
+    <svg viewBox="0 0 360 520" role="img" aria-label="A cozy room">
+      <rect width="360" height="520" rx="26" fill="#ffe3ee"/>
+      <rect y="440" width="360" height="80" fill="#d9f2e3"/>
+      <g><rect x="34" y="40" width="96" height="110" rx="8" fill="#fff" stroke="#7cc79b" stroke-width="6"/>
+         <path d="M82 40v110M34 95h96" stroke="#7cc79b" stroke-width="4"/>
+         <path d="M34 40q18 40 0 110M130 40q-18 40 0 110" fill="#f9a8c9" opacity=".7"/></g>
+      <g class="spot" data-open="photos" tabindex="0" role="button" aria-label="Open photos">
+        <rect x="160" y="48" width="64" height="76" rx="5" fill="#fff" stroke="#f06fa4" stroke-width="5"/>
+        <rect x="170" y="58" width="44" height="46" fill="#bfe8cf"/><circle cx="192" cy="76" r="7" fill="#f9a8c9"/>
+        <rect x="236" y="70" width="50" height="60" rx="5" fill="#fff" stroke="#5fbf8a" stroke-width="5" transform="rotate(6 261 100)"/>
+        <rect x="244" y="78" width="34" height="34" fill="#ffc9dd" transform="rotate(6 261 100)"/></g>
+      <g class="spot" data-open="calendar" tabindex="0" role="button" aria-label="Open calendar">
+        <rect x="302" y="44" width="42" height="54" rx="6" fill="#fff" stroke="#d6336c" stroke-width="3"/>
+        <rect x="302" y="44" width="42" height="14" rx="6" fill="#f06fa4"/>
+        <text x="323" y="85" text-anchor="middle" font-size="20" font-weight="700" fill="#24493a">♥</text></g>
+      <rect x="28" y="214" width="170" height="9" rx="3" fill="#c98b5b"/>
+      <g class="spot" data-open="song" tabindex="0" role="button" aria-label="Play our song">
+        <rect x="44" y="180" width="120" height="34" rx="6" fill="#f06fa4"/>
+        <circle cx="86" cy="190" r="22" fill="#2a2a33"/><circle cx="86" cy="190" r="7" fill="#7cc79b"/>
+        <path d="M140 172l-26 20" stroke="#fff" stroke-width="4" stroke-linecap="round"/></g>
+      <rect x="50" y="340" width="260" height="16" rx="5" fill="#c98b5b"/>
+      <rect x="66" y="356" width="12" height="100" fill="#b27546"/><rect x="282" y="356" width="12" height="100" fill="#b27546"/>
+      <g class="spot" data-open="wish" tabindex="0" role="button" aria-label="Make a wish">
+        <ellipse cx="140" cy="340" rx="52" ry="8" fill="#fff"/>
+        <rect x="100" y="296" width="80" height="44" rx="8" fill="#f9a8c9"/><rect x="116" y="262" width="48" height="36" rx="8" fill="#ffd3e4"/>
+        <path d="M100 312q10 12 20 0t20 0 20 0 20 0" fill="none" stroke="#fff" stroke-width="5"/>
+        <g fill="#5fbf8a"><rect x="124" y="244" width="5" height="20"/><rect x="138" y="244" width="5" height="20"/><rect x="152" y="244" width="5" height="20"/></g>
+        <g fill="#ffb84d"><ellipse class="flame" cx="126" cy="238" rx="4" ry="7"/><ellipse class="flame" cx="140" cy="238" rx="4" ry="7"/><ellipse class="flame" cx="154" cy="238" rx="4" ry="7"/></g></g>
+      <g class="spot" data-open="letters" tabindex="0" role="button" aria-label="Read the letters">
+        <rect x="218" y="314" width="68" height="28" rx="4" fill="#fff" stroke="#5fbf8a" stroke-width="3"/>
+        <path d="M218 316l34 16 34-16" fill="none" stroke="#5fbf8a" stroke-width="3"/>
+        <text x="252" y="338" text-anchor="middle" font-size="12" fill="#d6336c">♥</text></g>
+    </svg>
+  </main>
+
+  <div id="modal" hidden>
+    <div class="card" role="dialog" aria-modal="true" aria-labelledby="mTitle">
+      <button class="x" id="close" aria-label="Close">×</button>
+      <h2 id="mTitle"></h2>
+      <div id="mBody"></div>
+    </div>
+  </div>
+
+  <script src="app.js"></script>
+</body>
+</html>
